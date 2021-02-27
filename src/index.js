@@ -617,7 +617,7 @@ function createConfig(options, entry, format, writeMeta) {
 							).then(results => results.filter(Boolean).join('\n'));
 						},
 					}),
-					options.watch && run(),
+					options.target === 'node' && options.watch && run(),
 				)
 				.filter(Boolean),
 		},
